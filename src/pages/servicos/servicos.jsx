@@ -1,4 +1,4 @@
-const services = () => {
+const servicos = () => {
   return (
     <div>
       <h1>Serviços</h1>
@@ -6,4 +6,4 @@ const services = () => {
   );
 };
 
-export default services;
+export default servicos;

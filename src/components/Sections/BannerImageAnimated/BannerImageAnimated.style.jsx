@@ -85,13 +85,34 @@ export const ShapeBackground = styled(motion.div)`
   }}
 `;
 
-export const ArrowIcon = styled.img`
-  align-self: flex-end;
+export const ArrowIcon = styled.button`
+  position: absolute;
+  bottom: 15vh;
 
-  width: 100%;
-  max-width: 2rem;
+  ${({ direction }) => {
+    if (direction === 'finish')
+      return css`
+        right: 5rem;
+      `;
+
+    return css`
+      left: 5rem;
+    `;
+  }}
+
+  z-index: 100;
+
+  max-height: fit-content;
+
+  background: transparent;
+  border: none;
+
+  ${({ isLastPage }) => isLastPage && 'transform: rotate(180deg);'}
 
   svg {
+    width: 100%;
+    height: 100%;
+    max-width: 4rem;
     fill: ${({ iconColor }) => iconColor};
   }
 `;
