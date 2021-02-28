@@ -21,9 +21,14 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  h1, h2 {
+    margin: 0.37rem 0;
+  }
+
   p {
     ${theme.fonts.gothamLight}
     font-size: ${theme.base.fontMd};
+    margin: 0.5rem 0;
   }
 
   /* Famous Media Queries

@@ -1,0 +1,97 @@
+import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
+
+export const Container = styled.div`
+  overflow: hidden;
+
+  background: url(${({ imgSrc }) => imgSrc});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: left;
+
+  .fp-scroller {
+    height: 100%;
+  }
+`;
+
+export const ContentSlider = styled(motion.div)`
+  position: relative;
+
+  width: 55%;
+  height: 100%;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+
+  ${({ direction }) => {
+    if (direction === 'finish') {
+      return css`
+        margin-left: auto;
+        justify-content: flex-end;
+        padding-left: 10rem;
+        padding-right: 4rem;
+      `;
+    }
+
+    return css`
+      margin-right: auto;
+      justify-content: flex-start;
+      padding-left: 5rem;
+      padding-right: 4rem;
+    `;
+  }}
+`;
+
+export const ContentWrapper = styled.div`
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  color: ${({ color, theme }) => theme.colors[color]};
+
+  z-index: 2;
+
+  width: 80%;
+`;
+
+export const ShapeBackground = styled(motion.div)`
+  width: 120%;
+  height: 140%;
+
+  position: absolute;
+  z-index: 1;
+
+  background: ${({ theme, bgColor }) => theme.colors[bgColor]};
+
+  ${({ direction }) => {
+    if (direction === 'finish') {
+      return css`
+        right: -35%;
+        top: -15%;
+        transform: rotate(20deg);
+      `;
+    }
+
+    return css`
+      left: -35%;
+      top: -15%;
+      transform: rotate(-20deg);
+    `;
+  }}
+`;
+
+export const ArrowIcon = styled.img`
+  align-self: flex-end;
+
+  width: 100%;
+  max-width: 2rem;
+
+  svg {
+    fill: ${({ iconColor }) => iconColor};
+  }
+`;
