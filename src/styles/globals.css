@@ -1,0 +1,27 @@
+/*
+  Font Imports
+*/
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 400;
+  src: url("/fonts/GothamMedium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 600;
+  src: url("/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 800;
+  src: url("/fonts/Gotham-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 300;
+  src: url("/fonts/Gotham-Light.otf") format("opentype");
+}
