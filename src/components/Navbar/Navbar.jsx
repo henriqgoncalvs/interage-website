@@ -1,12 +1,20 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import Logo from 'components/Logo';
 
+import MobileMenu from './MobileMenu';
+
 import { Container, Nav } from './Navbar.style';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useRouter();
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <Container>
@@ -38,6 +46,10 @@ const Navbar = () => {
             </Link>
           </Nav.Link>
         </Nav.List>
+
+        <Nav.Menu onClick={() => toggleMenu()} />
+
+        {menuOpen && <MobileMenu toggleMenu={toggleMenu} />}
       </Nav>
     </Container>
   );

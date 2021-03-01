@@ -1,5 +1,4 @@
 import { Formik } from 'formik';
-import Image from 'next/image';
 
 import Button from 'components/Button';
 

@@ -17,6 +17,7 @@ export const Container = styled.div`
     justify-content: space-around;
     align-items: flex-start;
     height: 100%;
+    gap: 10rem;
   }
 
   @media (max-width: 64em) {

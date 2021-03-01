@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import theme from 'styles/theme';
@@ -81,6 +82,9 @@ const GlobalStyle = createGlobalStyle`
 const GlobalProvider = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Interage Software</title>
+      </Head>
       <GlobalStyle />
       {children}
     </ThemeProvider>
