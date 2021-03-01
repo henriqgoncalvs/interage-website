@@ -44,6 +44,13 @@ export const ContentSlider = styled(motion.div)`
       padding-right: 4rem;
     `;
   }}
+
+  @media(max-width: 64em) {
+    width: 100vw;
+    height: 55%;
+
+    ${({ direction }) => direction === 'finish' && 'padding-left: 0'};
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -57,6 +64,16 @@ export const ContentWrapper = styled.div`
   z-index: 2;
 
   width: 80%;
+
+  @media (max-width: 64em) {
+    align-self: flex-start;
+    /* padding-top: 10vh; */
+    padding-right: 5rem;
+
+    button {
+      margin-bottom: 3vh;
+    }
+  }
 `;
 
 export const ShapeBackground = styled(motion.div)`
@@ -83,6 +100,27 @@ export const ShapeBackground = styled(motion.div)`
       transform: rotate(-20deg);
     `;
   }}
+
+  @media(max-width: 64em) {
+    width: 220%;
+    height: 140%;
+
+    ${({ direction }) => {
+      if (direction === 'finish') {
+        return css`
+          right: -60%;
+          top: -60% !important;
+          transform: rotate(20deg);
+        `;
+      }
+
+      return css`
+        left: -60%;
+        top: -60% !important;
+        transform: rotate(-20deg);
+      `;
+    }}
+  }
 `;
 
 export const ArrowIcon = styled.button`
@@ -113,6 +151,10 @@ export const ArrowIcon = styled.button`
     width: 100%;
     height: 100%;
     max-width: 4rem;
-    fill: ${({ iconColor }) => iconColor};
+    fill: ${({ iconColor, theme }) => theme.colors[iconColor]};
+  }
+
+  @media (max-width: 64em) {
+    bottom: 10vh;
   }
 `;

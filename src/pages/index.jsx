@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
+import Button from 'components/Button';
+
 import BannerImageAnimated from 'components/Sections/BannerImageAnimated';
+import Footer from 'components/Sections/Footer';
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,7 +17,7 @@ export default function Home() {
     <>
       <ReactFullpage
         navigation={false}
-        scrollOverflow
+        // scrollOverflow
         sectionsColor={['white']}
         onLeave={(origin, destination) => handleSectionScroll(destination)}
         render={({ fullpageApi }) => {
@@ -109,10 +112,16 @@ export default function Home() {
                   Nós estamos sempre abertos para ouvir e discutir todas as
                   ideias dos nossos clientes.
                 </p>
-                <button type="button">COMECE SEU PROJETO</button>
+                <Button
+                  style={{ marginTop: '2rem' }}
+                  type="button"
+                  variant="light"
+                >
+                  COMECE SEU PROJETO
+                </Button>
               </BannerImageAnimated>
 
-              <div className="section fp-auto-height">Aqui vai o footer</div>
+              <Footer className="section fp-auto-height" />
             </div>
           );
         }}
