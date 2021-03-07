@@ -44,7 +44,7 @@ export default function Home() {
                   type="button"
                   variant="light"
                 >
-                  <Link href="/contato">
+                  <Link href="/contato" passHref>
                     <a>COMECE SEU PROJETO</a>
                   </Link>
                 </Button>
@@ -127,7 +127,7 @@ export default function Home() {
                   type="button"
                   variant="light"
                 >
-                  <Link href="/contato">
+                  <Link href="/contato" passHref>
                     <a>ENTRE EM CONTATO</a>
                   </Link>
                 </Button>

@@ -43,6 +43,7 @@ const HowWeDo = ({ className, onIconClick, isLastPage, ...restProps }) => {
         iconColor="black"
         isLastPage={isLastPage}
         onClick={onIconClick}
+        direction="finish"
       >
         <svg
           version="1.1"
