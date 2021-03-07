@@ -15,7 +15,7 @@ const variants = {
   },
 };
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
   ${({ variant, theme }) =>
     Object.keys(variants[variant]).map(
       (property) =>

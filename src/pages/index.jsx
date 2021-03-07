@@ -39,15 +39,15 @@ export default function Home() {
                   Somos apaixonados por resolver problemas e entregar
                   experiências personalizadas.
                 </p>
-                <Button
-                  style={{ marginTop: '2rem' }}
-                  type="button"
-                  variant="light"
-                >
-                  <Link href="/contato" passHref>
+                <Link href="/contato" passHref>
+                  <Button
+                    style={{ marginTop: '2rem' }}
+                    type="button"
+                    variant="light"
+                  >
                     <a>COMECE SEU PROJETO</a>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </BannerImage>
 
               <BannerImage
@@ -122,15 +122,15 @@ export default function Home() {
                   Nós estamos sempre abertos para ouvir e discutir todas as
                   ideias dos nossos clientes.
                 </p>
-                <Button
-                  style={{ marginTop: '2rem' }}
-                  type="button"
-                  variant="light"
-                >
-                  <Link href="/contato" passHref>
-                    <a>ENTRE EM CONTATO</a>
-                  </Link>
-                </Button>
+                <Link href="/contato" passHref>
+                  <Button
+                    style={{ marginTop: '2rem' }}
+                    type="button"
+                    variant="light"
+                  >
+                    ENTRE EM CONTATO
+                  </Button>
+                </Link>
               </BannerImage>
 
               <Footer className="section fp-auto-height" />

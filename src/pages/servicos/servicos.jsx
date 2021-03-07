@@ -39,15 +39,15 @@ const Servicos = () => {
                   Transformamos ideias, desenvolvendo software desde a
                   prototipação até sugestões de modelo de negócio.
                 </p>
-                <Button
-                  style={{ marginTop: '2rem' }}
-                  type="button"
-                  variant="dark"
-                >
-                  <Link href="/contato">
+                <Link href="/contato">
+                  <Button
+                    style={{ marginTop: '2rem' }}
+                    type="button"
+                    variant="dark"
+                  >
                     <a>COMECE SEU PROJETO</a>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </BannerImage>
 
               <BannerImage
@@ -98,15 +98,15 @@ const Servicos = () => {
               >
                 <h1>Vamos conversar mais sobre suas ideias.</h1>
                 <p>Entre em contato com a Interage pelo formulário.</p>
-                <Button
-                  style={{ marginTop: '2rem' }}
-                  type="button"
-                  variant="dark"
-                >
-                  <Link href="/contato">
+                <Link href="/contato">
+                  <Button
+                    style={{ marginTop: '2rem' }}
+                    type="button"
+                    variant="dark"
+                  >
                     <a>COMECE SEU PROJETO</a>
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </BannerImage>
 
               <Footer className="section fp-auto-height" />
