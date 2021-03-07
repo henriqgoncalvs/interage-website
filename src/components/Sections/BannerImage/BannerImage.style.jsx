@@ -102,7 +102,7 @@ export const ShapeBackground = styled(motion.div)`
   }}
 
   @media(max-width: 64em) {
-    width: 220%;
+    width: 240%;
     height: 140%;
 
     ${({ direction }) => {
@@ -156,5 +156,16 @@ export const ArrowIcon = styled.button`
 
   @media (max-width: 64em) {
     bottom: 10vh;
+
+    ${({ direction }) => {
+      if (direction === 'finish')
+        return css`
+          right: 10rem;
+        `;
+
+      return css`
+        left: 5rem;
+      `;
+    }}
   }
 `;
