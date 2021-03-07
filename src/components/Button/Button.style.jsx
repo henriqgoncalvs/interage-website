@@ -25,6 +25,9 @@ export const StyledButton = styled.button`
   ${({ width }) => (width ? `width: ${width}` : 'width: fit-content')};
 
   font-size: ${({ theme }) => theme.base.fontXs};
+  color: ${({ variant, theme }) => theme.colors[variants[variant].color]};
+  -webkit-text-fill-color: ${({ variant, theme }) =>
+    theme.colors[variants[variant].color]};
 
   border: none;
 
@@ -40,5 +43,7 @@ export const StyledButton = styled.button`
   a {
     text-decoration: none;
     color: ${({ variant, theme }) => theme.colors[variants[variant].color]};
+    -webkit-text-fill-color: ${({ variant, theme }) =>
+      theme.colors[variants[variant].color]};
   }
 `;
