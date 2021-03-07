@@ -47,7 +47,7 @@ export const ContentSlider = styled(motion.div)`
 
   @media(max-width: 64em) {
     width: 100vw;
-    height: 55%;
+    height: 70%;
 
     ${({ direction }) => direction === 'finish' && 'padding-left: 0'};
   }
