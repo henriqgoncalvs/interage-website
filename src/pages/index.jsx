@@ -45,7 +45,7 @@ export default function Home() {
                     type="button"
                     variant="light"
                   >
-                    <a>COMECE SEU PROJETO</a>
+                    COMECE SEU PROJETO
                   </Button>
                 </Link>
               </BannerImage>

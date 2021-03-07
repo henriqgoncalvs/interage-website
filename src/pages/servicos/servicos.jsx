@@ -45,7 +45,7 @@ const Servicos = () => {
                     type="button"
                     variant="dark"
                   >
-                    <a>COMECE SEU PROJETO</a>
+                    COMECE SEU PROJETO
                   </Button>
                 </Link>
               </BannerImage>
@@ -104,7 +104,7 @@ const Servicos = () => {
                     type="button"
                     variant="dark"
                   >
-                    <a>COMECE SEU PROJETO</a>
+                    COMECE SEU PROJETO
                   </Button>
                 </Link>
               </BannerImage>
