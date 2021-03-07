@@ -29,21 +29,14 @@ export const StyledButton = styled.a`
   -webkit-text-fill-color: ${({ variant, theme }) =>
     theme.colors[variants[variant].color]};
 
-  border: none;
+  border: none !important;
 
-  padding: 3rem 5rem;
+  padding: 3rem 5rem !important;
 
   transition: all 0.2s ease-in-out;
 
   &:hover {
     /* filter: brightness(90%); */
     box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
-  }
-
-  a {
-    text-decoration: none;
-    color: ${({ variant, theme }) => theme.colors[variants[variant].color]};
-    -webkit-text-fill-color: ${({ variant, theme }) =>
-      theme.colors[variants[variant].color]};
   }
 `;
