@@ -28,7 +28,8 @@ export const ImageContainer = styled.div`
 
   @media (max-width: 64em) {
     padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-bottom: 0;
+    flex: 40%;
   }
 `;
 

@@ -35,7 +35,12 @@ export const ImageContainer = styled.div`
 
   @media (max-width: 64em) {
     padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-bottom: 0vh;
+    gap: 0.8rem;
+
+    div > img {
+      width: 80% !important;
+    }
   }
 `;
 
@@ -59,6 +64,10 @@ export const ContentContainer = styled.div`
   @media (max-width: 32em) {
     h3 {
       font-size: ${({ theme }) => theme.base.fontXl};
+    }
+
+    p {
+      font-size: ${({ theme }) => theme.base.fontSm};
     }
   }
 
