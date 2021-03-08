@@ -32,7 +32,9 @@ export const InfoSection = styled.div`
   justify-content: space-between;
   gap: 1.3rem;
 
-  color: ${({ theme }) => theme.colors.white};
+  a {
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const InfoTilte = styled.h3`
@@ -45,6 +47,7 @@ export const InfoLink = styled.a`
   ${({ theme }) => theme.fonts.gothamLight}
   font-size: 1.5rem;
   text-decoration: none;
+  color: ${({ theme: colors }) => colors.white};
 
   display: flex;
   align-items: center;

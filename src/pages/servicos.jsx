@@ -116,7 +116,7 @@ const Servicos = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['servicos', 'navbar'])),
+    ...(await serverSideTranslations(locale, ['servicos', 'navbar', 'footer'])),
   },
 });
 

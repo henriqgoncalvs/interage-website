@@ -79,7 +79,7 @@ const Sobre = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['sobre', 'navbar'])),
+    ...(await serverSideTranslations(locale, ['sobre', 'navbar', 'footer'])),
   },
 });
 
