@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
@@ -11,7 +12,7 @@ import { Container, Nav } from './Navbar.style';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname } = useRouter();
+  const { pathname, locale } = useRouter();
   const { t } = useTranslation('navbar');
 
   const toggleMenu = () => {
@@ -45,6 +46,29 @@ const Navbar = () => {
           <Nav.Link active={pathname === '/contato'}>
             <Link href="/contato">
               <a>{t('contact')}</a>
+            </Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link href="/" locale={locale === 'pt' ? 'en' : 'pt'}>
+              <a>
+                {locale === 'pt' ? (
+                  <Image
+                    src="/img/usa-flag.png"
+                    objectFit="contain"
+                    objectPosition="center"
+                    width={30}
+                    height={30}
+                  />
+                ) : (
+                  <Image
+                    src="/img/brazil-flag.png"
+                    objectFit="contain"
+                    objectPosition="center"
+                    width={30}
+                    height={30}
+                  />
+                )}
+              </a>
             </Link>
           </Nav.Link>
         </Nav.List>

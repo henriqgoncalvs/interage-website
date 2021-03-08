@@ -28,6 +28,7 @@ export const StyledButton = styled.a`
   color: ${({ variant, theme }) => theme.colors[variants[variant].color]};
   -webkit-text-fill-color: ${({ variant, theme }) =>
     theme.colors[variants[variant].color]};
+  cursor: pointer;
 
   border: none !important;
 
@@ -36,7 +37,11 @@ export const StyledButton = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    /* filter: brightness(90%); */
     box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &:disabled,
+  &[disabled] {
+    filter: brightness(60%);
   }
 `;
