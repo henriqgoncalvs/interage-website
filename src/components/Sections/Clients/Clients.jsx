@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import {
   Container,
@@ -8,29 +9,27 @@ import {
 } from './Clients.style';
 
 const brandImage = [
-  '/img/total-combustiveis.png',
-  '/img/dayka.png',
-  '/img/prefeitura-petrolina.png',
-  '/img/ptla.png',
-  '/img/reis-pacheco.png',
-  '/img/sest-senat.png',
+  'total-combustiveis.png',
+  'dayka.png',
+  'prefeitura-petrolina.png',
+  'ptla.png',
+  'reis-pacheco.png',
+  'sest-senat.png',
 ];
 
 const Team = ({ className, onIconClick, ...restProps }) => {
+  const { t } = useTranslation('sobre');
+
   return (
     <Container className={className} {...restProps}>
       <ContentContainer>
-        <h3>Alguns dos nossos clientes.</h3>
-        <p>
-          Valorizamos cada projeto. Criamos um design exclusivo para tornar seu
-          projeto excepcional e digno de ser visto. Sabemos como delinear suas
-          vantagens comerciais.
-        </p>
+        <h3>{t('clients_title')}</h3>
+        <p>{t('clients_sub')}</p>
       </ContentContainer>
       <ImageContainer>
         {brandImage.map((image) => (
           <Image
-            src={image}
+            src={`/img/${image}`}
             objectFit="contain"
             objectPosition="center"
             width={751}

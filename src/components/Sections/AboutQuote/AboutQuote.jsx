@@ -1,3 +1,5 @@
+import { useTranslation } from 'next-i18next';
+
 import {
   Container,
   LeftBox,
@@ -7,21 +9,23 @@ import {
 } from './AboutQuote.style';
 
 const AboutQuote = ({ className, onIconClick, ...restProps }) => {
+  const { t } = useTranslation('sobre');
+
   return (
     <Container className={className} {...restProps}>
       <LeftBox>
         <TextContent>
           <span>&#34;</span>
-          <span>Somos apaixonados por resolver problemas todo dia.</span>
+          <span>{t('about_section1')}</span>
         </TextContent>
       </LeftBox>
       <RightBox>
         <TextContent>
-          <span>O desafio de entregar a melhor solução nos alimenta.</span>
+          <span>{t('about_section2')}</span>
           <span>&#34;</span>
         </TextContent>
       </RightBox>
-      <ArrowIcon iconColor="black" onClick={onIconClick}>
+      <ArrowIcon iconColor="black" onClick={onIconClick} direction="finish">
         <svg
           version="1.1"
           id="Capa_1"

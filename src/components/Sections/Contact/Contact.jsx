@@ -1,5 +1,7 @@
 import { Formik } from 'formik';
 
+import { useTranslation } from 'next-i18next';
+
 import Button from 'components/Button';
 
 import {
@@ -15,16 +17,18 @@ import {
 } from './Contact.style';
 
 const Contact = ({ className, ...restProps }) => {
+  const { t } = useTranslation('contato');
+
   return (
     <Container className={className} {...restProps}>
       <BackgroundImage />
       <TitleWrapper>
         <Title>
-          Tem um projeto? Legal!
+          {t('title_1')}
           <br />
-          Mande-nos os detalhes para
+          {t('title_2')}
           <br />
-          conversarmos mais sobre isso.
+          {t('title_3')}
         </Title>
       </TitleWrapper>
       <FormContainer>
@@ -40,16 +44,23 @@ const Contact = ({ className, ...restProps }) => {
             <FormWrapper>
               <InputsWrapper>
                 <InputsLeft>
-                  <input name="name" placeholder="Seu nome" />
-                  <input name="email" placeholder="Seu email" />
-                  <input name="company" placeholder="Nome da sua empresa" />
+                  <input name="name" placeholder={t('name_placeholder')} />
+                  <input name="email" placeholder={t('email_placeholder')} />
+                  <input
+                    name="company"
+                    placeholder={t('company_placeholder')}
+                  />
                 </InputsLeft>
                 <InputsRight>
-                  <textarea name="message" placeholder="Mensagem" rows="6" />
+                  <textarea
+                    name="message"
+                    placeholder={t('message_placeholder')}
+                    rows="6"
+                  />
                 </InputsRight>
               </InputsWrapper>
               <Button type="submit" variant="primary">
-                ENVIAR
+                {t('button')}
               </Button>
             </FormWrapper>
           )}

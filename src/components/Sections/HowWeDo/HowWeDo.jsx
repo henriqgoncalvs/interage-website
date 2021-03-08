@@ -1,3 +1,5 @@
+import { useTranslation } from 'next-i18next';
+
 import {
   Container,
   LeftBox,
@@ -7,35 +9,30 @@ import {
 } from './HowWeDo.style';
 
 const HowWeDo = ({ className, onIconClick, isLastPage, ...restProps }) => {
+  const { t } = useTranslation('sobre');
+
   return (
     <Container className={className} {...restProps}>
       <LeftBox>
         <TextContent>
-          <h3>Sobre nós.</h3>
-          <p>
-            Trabalhando com cliente constatemente envolvido em todas as etapas,
-            transformamos ideias em realidade. Produzindo softwares desde a
-            prototipação até a sugestão de modelos de negócios, nós garantimos
-            soluções simplese experiências únicas às empresas de médio e grande
-            porte nos ramos de agricultura, gestão, educação e logística.
-          </p>
+          <h3>{t('howwedo_title1')}</h3>
+          <p>{t('howwedo_sub1')}</p>
         </TextContent>
       </LeftBox>
       <RightBox>
         <TextContent>
-          <h3>Como fazemos.</h3>
+          <h3>{t('howwedo_title2')}</h3>
           <p>
-            Buscamos sempre ter o cliente envolvido em todas as etapas,
-            promovendo experiências únicas e realmente desenvolvendo juntos
-            soluções simples. Acreditamos que ter o cliente sempre próximo e
-            junto é o melhor caminho para termos melhores soluções e
-            experiências. Nossas etapas de desenvolvimento de software são:
+            {t('howwedo_sub2')}
             <br />
             <br />
-            1º: Consultoria <br />
-            2º: Prototipação <br />
-            3º: Implementação <br />
-            4º: Implantação
+            {t('howwedo_item1')}
+            <br />
+            {t('howwedo_item2')}
+            <br />
+            {t('howwedo_item3')}
+            <br />
+            {t('howwedo_item4')}
           </p>
         </TextContent>
       </RightBox>

@@ -2,13 +2,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ReactFullpage from '@fullpage/react-fullpage';
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Button from 'components/Button';
 
+import Navbar from 'components/Navbar';
 import BannerImage from 'components/Sections/BannerImage';
 import Footer from 'components/Sections/Footer';
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation('common');
 
   const handleSectionScroll = (destination) => {
     setActiveIndex(destination.index);
@@ -16,6 +21,7 @@ export default function Home() {
 
   return (
     <>
+      <Navbar />
       <ReactFullpage
         navigation={false}
         // scrollOverflow
@@ -34,18 +40,15 @@ export default function Home() {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 0}
               >
-                <h1>Oi! Nós somos a Interage.</h1>
-                <p>
-                  Somos apaixonados por resolver problemas e entregar
-                  experiências personalizadas.
-                </p>
+                <h1>{t('title_section1')}</h1>
+                <p>{t('sub_section1')}</p>
                 <Link href="/contato" passHref>
                   <Button
                     style={{ marginTop: '2rem' }}
                     type="button"
                     variant="light"
                   >
-                    COMECE SEU PROJETO
+                    {t('button_section1')}
                   </Button>
                 </Link>
               </BannerImage>
@@ -60,7 +63,7 @@ export default function Home() {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 1}
               >
-                <h2>Nosso trabalho é transformar ideias em realidade.</h2>
+                <h2>{t('title_section2')}</h2>
               </BannerImage>
 
               <BannerImage
@@ -73,11 +76,11 @@ export default function Home() {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 2}
               >
-                <h2>Nosso objetivo é resolver qualquer problema.</h2>
+                <h2>{t('title_section3')}</h2>
               </BannerImage>
 
               <BannerImage
-                className="section section3"
+                className="section section4"
                 direction="finish"
                 imgSrc="/img/bg.jpg"
                 bgColor="primary"
@@ -86,11 +89,11 @@ export default function Home() {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 3}
               >
-                <h2>E nós fazemos isso da forma que o cliente preferir.</h2>
+                <h2>{t('title_section4')}</h2>
               </BannerImage>
 
               <BannerImage
-                className="section section3"
+                className="section section5"
                 direction="start"
                 imgSrc="/img/bg.jpg"
                 bgColor="white"
@@ -99,15 +102,12 @@ export default function Home() {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 4}
               >
-                <h2>Softwares Personalizados</h2>
-                <p>
-                  Nossa especialidade é o desenvolvimento de softwares
-                  personalizados para ajudar na resolução de problemas.
-                </p>
+                <h2>{t('title_section5')}</h2>
+                <p>{t('sub_section5')}</p>
               </BannerImage>
 
               <BannerImage
-                className="section section3"
+                className="section section6"
                 direction="finish"
                 imgSrc="/img/bg.jpg"
                 bgColor="primaryDarker"
@@ -117,18 +117,15 @@ export default function Home() {
                 isLastPage
                 active={activeIndex === 5}
               >
-                <h2>Trabalhe com a Interage.</h2>
-                <p>
-                  Nós estamos sempre abertos para ouvir e discutir todas as
-                  ideias dos nossos clientes.
-                </p>
+                <h2>{t('title_section6')}</h2>
+                <p>{t('sub_section6')}</p>
                 <Link href="/contato" passHref>
                   <Button
                     style={{ marginTop: '2rem' }}
                     type="button"
                     variant="light"
                   >
-                    ENTRE EM CONTATO
+                    {t('button_section6')}
                   </Button>
                 </Link>
               </BannerImage>
@@ -141,3 +138,9 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'navbar'])),
+  },
+});

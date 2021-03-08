@@ -2,13 +2,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ReactFullpage from '@fullpage/react-fullpage';
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Button from 'components/Button';
 
+import Navbar from 'components/Navbar';
 import BannerImage from 'components/Sections/BannerImage';
 import Footer from 'components/Sections/Footer';
 
 const Servicos = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation('servicos');
 
   const handleSectionScroll = (destination) => {
     setActiveIndex(destination.index);
@@ -16,6 +21,7 @@ const Servicos = () => {
 
   return (
     <>
+      <Navbar />
       <ReactFullpage
         navigation={false}
         // scrollOverflow
@@ -34,18 +40,15 @@ const Servicos = () => {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 0}
               >
-                <h1>Somos movidos por boas ideias.</h1>
-                <p>
-                  Transformamos ideias, desenvolvendo software desde a
-                  prototipação até sugestões de modelo de negócio.
-                </p>
+                <h1>{t('title_section1')}</h1>
+                <p>{t('sub_section1')}</p>
                 <Link href="/contato">
                   <Button
                     style={{ marginTop: '2rem' }}
                     type="button"
                     variant="dark"
                   >
-                    COMECE SEU PROJETO
+                    {t('button_section1')}
                   </Button>
                 </Link>
               </BannerImage>
@@ -60,12 +63,8 @@ const Servicos = () => {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 1}
               >
-                <h1>Veja sua ideia ser implementada do jeito que preferir.</h1>
-                <p>
-                  Sabemos o que é necessário para que sua ideia seja
-                  implementada da melhor forma possível, e nós iremos te ajudar
-                  a potencializar os resultados.
-                </p>
+                <h1>{t('title_section2')}</h1>
+                <p>{t('sub_section2')}</p>
               </BannerImage>
 
               <BannerImage
@@ -78,11 +77,8 @@ const Servicos = () => {
                 onIconClick={() => fullpageApi.moveSectionDown()}
                 active={activeIndex === 2}
               >
-                <h1>Obtenha uma implementação eficiente da sua ideia.</h1>
-                <p>
-                  Veja sua ideia ser implementada com as melhores tecnlogias do
-                  mercado. A Interage consegue somar eficiência com modernidade.
-                </p>
+                <h1>{t('title_section3')}</h1>
+                <p>{t('sub_section3')}</p>
               </BannerImage>
 
               <BannerImage
@@ -96,15 +92,15 @@ const Servicos = () => {
                 onIconClick={() => fullpageApi.moveTo(1, 0)}
                 active={activeIndex === 3}
               >
-                <h1>Vamos conversar mais sobre suas ideias.</h1>
-                <p>Entre em contato com a Interage pelo formulário.</p>
+                <h1>{t('sub_section4')}</h1>
+                <p>{t('sub_section4')}</p>
                 <Link href="/contato">
                   <Button
                     style={{ marginTop: '2rem' }}
                     type="button"
                     variant="dark"
                   >
-                    COMECE SEU PROJETO
+                    {t('button_section4')}
                   </Button>
                 </Link>
               </BannerImage>
@@ -117,5 +113,11 @@ const Servicos = () => {
     </>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['servicos', 'navbar'])),
+  },
+});
 
 export default Servicos;

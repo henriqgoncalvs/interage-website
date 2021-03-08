@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import {
   Container,
@@ -8,6 +9,8 @@ import {
 } from './Team.style';
 
 const Team = ({ className, onIconClick, ...restProps }) => {
+  const { t } = useTranslation('sobre');
+
   return (
     <Container className={className} {...restProps}>
       <ImageContainer>
@@ -20,11 +23,8 @@ const Team = ({ className, onIconClick, ...restProps }) => {
         />
       </ImageContainer>
       <ContentContainer>
-        <h3>Uma empresa de indivíduos.</h3>
-        <p>
-          Inovar é um compromisso e buscamos os melhores métodos, ferramentas,
-          tecnlogias e pessoas para garantir isso.
-        </p>
+        <h3>{t('team_title')}</h3>
+        <p>{t('team_sub')}</p>
       </ContentContainer>
       <ArrowIcon iconColor="black" onClick={onIconClick}>
         <svg
