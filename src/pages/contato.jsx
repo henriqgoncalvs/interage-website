@@ -30,7 +30,7 @@ const Contato = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['contato'])),
+    ...(await serverSideTranslations(locale, ['contato', 'navbar'])),
   },
 });
 
