@@ -7,8 +7,8 @@
 
 <div align="center">
 
-  [Vercel Status](https://vercelbadge.vercel.app/api/henriiqueg/interage-website)
-  [Status](https://img.shields.io/badge/status-active-success.svg)
+  [![Vercel Status](https://vercelbadge.vercel.app/api/henriiqueg/interage-website)](https://vercelbadge.vercel.app/api/henriiqueg/interage-website)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)](https://vercelbadge.vercel.app/api/henriiqueg/interage-website)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
