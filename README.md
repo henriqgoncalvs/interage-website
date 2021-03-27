@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width="200" src="https://interage-website.vercel.app/_next/image?url=%2Fimg%2Flogo-interage.png&w=256&q=75" alt="Interage Logo"></a>
+ <img width="200" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHHkS8GpIZnbw/company-logo_200_200/0/1523888669603?e=2159024400&v=beta&t=hasGFbv0BiPn2C1yCJt3Nr_r_PAKheUe6YOSqPCL-oM" alt="Interage Logo"></a>
 </p>
 
 <h3 align="center">Interage Website</h3>
