@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="" rel="noopener">
+ <img width="200" src="https://interage-website.vercel.app/_next/image?url=%2Fimg%2Flogo-interage.png&w=256&q=75" alt="Interage Logo"></a>
+</p>
 
-## Getting Started
+<h3 align="center">Interage Website</h3>
 
-First, run the development server:
+<div align="center">
 
-```bash
-npm run dev
-# or
-yarn dev
+  [Vercel Status](https://vercelbadge.vercel.app/api/henriiqueg/interage-website)
+  [Status](https://img.shields.io/badge/status-active-success.svg)]
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+---
+
+<p align="center"> 👋 Website made for a software house based on Recife, Pernambuco, Brazil.
+    <br> 
+</p>
+
+<p>See live: <a href="https://interage-website.vercel.app" target="_blank">Interage Website</a></p>
+
+## 📝 Table of Contents
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
+
+## 🧐 About <a name = "about"></a>
+This is a institutional website built for a software house. Since the visual identity of the company have moderny and serious characteristics, the website was designed following that pattern and developed with lots of animations to bring the modern characteristic.
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+### Installing
+After clonning the branch, you need to install dependencies.
+
+To install dependencies, run
+
+```
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_or_
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Then, to run locally, you need to run
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+yarn start
+```
 
-## Learn More
+_or_
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⛏️ Built Using <a name = "built_using"></a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org) - Next.js
+- [Styled-components](https://styled-components.com) - Styled Components _for styling_
+- [Framer Motion](https://www.framer.com/motion/) - Framer Motion _for animations_
+- [i18n](https://github.com/isaachinman/next-i18next) - next-i18next _for translation_
+- [Adobe XD](https://www.adobe.com/br/products/xd.html) - Adobe XD _for design_
 
-## Deploy on Vercel
+### Other Libs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- React Full Page _for full page scroll_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ✍️ Authors <a name = "authors"></a>
+- [@henriiqueg](https://github.com/henriiqueg) - Design & Development
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+- If you want to help in this project, feel free to fork and submit your Pull Request
+- See ya👋
